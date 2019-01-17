@@ -1,5 +1,6 @@
 package pageobject.frontpage;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -55,11 +56,7 @@ public class FrontPage extends PageObject {
         dateTo.click();
     }
 
-    public void selectTimePickerTo() {
-        hourTo.click();
-    }
-
-    public TimeAndDatePage clickButtonOrder() {
+    private TimeAndDatePage clickButtonOrder() {
         buttonOrder.click();
         return new TimeAndDatePage(driver);
     }
@@ -84,7 +81,7 @@ public class FrontPage extends PageObject {
         }
         if (!hourFromFound) {
             boolean foundClosest = false;
-            int timeInt = Integer.parseInt(time.substring(0, 2));
+            int timeInt = Integer.parseInt(time.substring(0, 2)) - 1;
 
             while (!foundClosest) {
                 for (WebElement hour : availableHours) {
@@ -108,7 +105,20 @@ public class FrontPage extends PageObject {
         return Integer.toString(dayInt);
     }
 
-    public boolean verifyThatActualDayIsDisabled() {
+    public TimeAndDatePage fillInTheReservationInfo(int daysFromToday, String timeFrom, int daysFromToday2, String timeTo) {
+        dateFrom.click();
+        selectDay(daysFromToday);
+        hourFrom.click();
+        selectTime(timeFrom);
+        dateTo.click();
+        Assert.assertTrue(verifyThatActualDayIsDisabled());
+        selectDay(daysFromToday2);
+        hourTo.click();
+        selectTime(timeTo);
+        return clickButtonOrder();
+    }
+
+    private boolean verifyThatActualDayIsDisabled() {
         boolean todayIsDisabled = false;
         for (WebElement day : unavailableDays) {
             if (day.getText().equals(getFutureDay(0))) {

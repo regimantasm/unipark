@@ -9,32 +9,20 @@ import test.TestBase;
 
 public class FrontPageTest extends TestBase {
 
-    private String preferredFromTime = "15:00";
     private FrontPage front = new FrontPage(driver);
 
     @Test
-    public void checkThatActualDayIsDisabled() {
-        front.selectDatePickerFrom();
-        front.selectDay(1);
-        front.selectTimePickerFrom();
-        front.selectTime(preferredFromTime);
-        front.selectDatePickerTo();
-        Assert.assertTrue(front.verifyThatActualDayIsDisabled());
-    }
-
-    @Test
     public void checkThatRigaHasASingleParkingZone() {
-        TimeAndDatePage time = fillInTheReservationInfo();
+        TimeAndDatePage time = front.fillInTheReservationInfo(1, "15:00", 2, "15:00");
         time.selectAirport(3);
         time.checkParkingZoneSize(1);
     }
 
     @Test
     public void selectTheCheapestZoneInVilnius() throws InterruptedException {
-        String carNumber = "JDC777";
-        TimeAndDatePage time = fillInTheReservationInfo();
+        TimeAndDatePage time = front.fillInTheReservationInfo(1, "15:00", 2, "15:00");
         time.selectAirport(1);
-        time.enterCarNumber(carNumber);
+        time.enterCarNumber("JCA666");
         OrderPage order = time.selectCheapestParkingZone();
         order.checkPageDisplay();
         order.serviceSelector(1, "up", 2);
@@ -42,18 +30,5 @@ public class FrontPageTest extends TestBase {
         order.fillInPersonalData("Jonas", "Jonka", "+37066666666", "jon.jonk@jonkatesting.org");
         order.checkAllCheckboxes();
         Thread.sleep(5000);
-    }
-
-    private TimeAndDatePage fillInTheReservationInfo() {
-        front.selectDatePickerFrom();
-        front.selectDay(1);
-        front.selectTimePickerFrom();
-        front.selectTime(preferredFromTime);
-        front.selectDatePickerTo();
-        front.selectDay(2);
-        front.selectTimePickerTo();
-        String preferredToTime = "15:00";
-        front.selectTime(preferredToTime);
-        return front.clickButtonOrder();
     }
 }
