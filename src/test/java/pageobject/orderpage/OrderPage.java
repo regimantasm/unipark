@@ -1,7 +1,8 @@
 package pageobject.orderpage;
 
+import helper.Scroll;
+import helper.enums.CheckboxType;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +14,8 @@ import java.util.List;
 
 public class OrderPage extends PageObject {
 
-    private WebDriverWait wait = new WebDriverWait(driver, 5);
+
+    public WebDriverWait wait = new WebDriverWait(driver, 5);
 
     @FindBy(css = "table[class=service-item]:not([style*='none'])")
     private List<WebElement> additionalServices;
@@ -58,7 +60,7 @@ public class OrderPage extends PageObject {
         super(driver);
     }
 
-    public void checkPageDisplay() {
+    public void waitUntilPageIsDisplayed() {
         wait.until(ExpectedConditions.visibilityOf(inputFirstName));
     }
 
@@ -81,32 +83,32 @@ public class OrderPage extends PageObject {
         inputEmail.sendKeys(email);
     }
 
-    public void fillInCompanyData(String companyName, String address, String organisationNumber, String vatNumber) {
-        inputOrganisationName.sendKeys(companyName);
+    public void fillInOrganisationData(String organisationName, String address, String organisationNumber, String vatNumber) {
+        inputOrganisationName.sendKeys(organisationName);
         inputAddress.sendKeys(address);
         inputOrganisationNumber.sendKeys(organisationNumber);
         inputVatNumber.sendKeys(vatNumber);
     }
 
     private void checkRulesAndConditions() {
-        scrollToElement(checkboxes.get(0));
-        checkboxes.get(0).click();
-        scrollToElement(buttonAccept);
+        Scroll.scrollToElement(driver, checkboxes.get(0));
+        checkboxes.get(CheckboxType.TERMS_AND_CONDITIONS.getNumeration()).click();
+        Scroll.scrollToElement(driver, buttonAccept);
         buttonAgreeCookie.click();
         wait.until(ExpectedConditions.visibilityOf(buttonAccept));
         buttonAccept.click();
     }
 
     private void checkNewsLetter() {
-        checkboxes.get(2).click();
+        checkboxes.get(CheckboxType.NEWS_LETTER.getNumeration()).click();
     }
 
     private void checkReceiveInvoice() {
-        checkboxes.get(3).click();
+        checkboxes.get(CheckboxType.GET_INVOICE.getNumeration()).click();
 
     }
 
-    private void scrollToElement(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-    }
+//    private void scrollToElement(WebElement element) {
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//    }
 }

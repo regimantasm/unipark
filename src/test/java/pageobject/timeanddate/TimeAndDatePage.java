@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 public class TimeAndDatePage extends PageObject {
 
-    WebDriverWait wait = new WebDriverWait(driver, 5);
+    private WebDriverWait wait = new WebDriverWait(driver, 5);
 
     @FindBy(css = ".tabs a")
     private List<WebElement> airPorts;
@@ -35,8 +35,8 @@ public class TimeAndDatePage extends PageObject {
     }
 
     public void selectAirport(int number) {
-        airPorts.get(number - 1).click();
-        airPorts.get(number - 1).click();
+        airPorts.get(number).click();
+        airPorts.get(number).click();
     }
 
     public void checkParkingZoneSize(int size) {

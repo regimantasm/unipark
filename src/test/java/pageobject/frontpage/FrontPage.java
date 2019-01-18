@@ -44,24 +44,12 @@ public class FrontPage extends PageObject {
         super(driver);
     }
 
-    public void selectDatePickerFrom() {
-        dateFrom.click();
-    }
-
-    public void selectTimePickerFrom() {
-        hourFrom.click();
-    }
-
-    public void selectDatePickerTo() {
-        dateTo.click();
-    }
-
     private TimeAndDatePage clickButtonOrder() {
         buttonOrder.click();
         return new TimeAndDatePage(driver);
     }
 
-    public void selectDay(int daysFromToday) {
+    private void selectDay(int daysFromToday) {
         for (WebElement day : availableDays) {
             if (day.getText().equals(getFutureDay(daysFromToday))) {
                 day.click();
@@ -70,7 +58,7 @@ public class FrontPage extends PageObject {
         }
     }
 
-    public void selectTime(String time) {
+    private void selectTime(String time) {
         boolean hourFromFound = false;
         for (WebElement hour : availableHours) {
             if (hour.getText().equals(time)) {
@@ -99,12 +87,6 @@ public class FrontPage extends PageObject {
         }
     }
 
-    private String getFutureDay(int daysFromToday) {
-        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
-        int dayInt = calendar.get(Calendar.DAY_OF_MONTH) + daysFromToday;
-        return Integer.toString(dayInt);
-    }
-
     public TimeAndDatePage fillInTheReservationInfo(int daysFromToday, String timeFrom, int daysFromToday2, String timeTo) {
         dateFrom.click();
         selectDay(daysFromToday);
@@ -126,5 +108,11 @@ public class FrontPage extends PageObject {
             }
         }
         return todayIsDisabled;
+    }
+
+    private String getFutureDay(int daysFromToday) {
+        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+        int dayInt = calendar.get(Calendar.DAY_OF_MONTH) + daysFromToday;
+        return Integer.toString(dayInt);
     }
 }

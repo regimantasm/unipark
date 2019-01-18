@@ -1,6 +1,6 @@
 package test.frontpagetest;
 
-import org.junit.Assert;
+import helper.enums.Airport;
 import org.junit.Test;
 import pageobject.frontpage.FrontPage;
 import pageobject.orderpage.OrderPage;
@@ -14,7 +14,7 @@ public class FrontPageTest extends TestBase {
     @Test
     public void checkThatRigaHasASingleParkingZone() {
         TimeAndDatePage time = front.fillInTheReservationInfo(1, "15:00", 2, "15:00");
-        time.selectAirport(3);
+        time.selectAirport(Airport.RIGA_AIRPORT.getNumeration());
         time.checkParkingZoneSize(1);
     }
 
@@ -24,11 +24,11 @@ public class FrontPageTest extends TestBase {
         time.selectAirport(1);
         time.enterCarNumber("JCA666");
         OrderPage order = time.selectCheapestParkingZone();
-        order.checkPageDisplay();
+        order.waitUntilPageIsDisplayed();
         order.serviceSelector(1, "up", 2);
         order.serviceSelector(2, "up", 2);
         order.fillInPersonalData("Jonas", "Jonka", "+37066666666", "jon.jonk@jonkatesting.org");
         order.checkAllCheckboxes();
-        order.fillInCompanyData("Jono nakvynės namai", "Saltoniškių g. 15-11", "121212121212", "12121212121214");
+        order.fillInOrganisationData("Jono nakvynės namai", "Saltoniškių g. 15-11", "121212121212", "12121212121214");
     }
 }
