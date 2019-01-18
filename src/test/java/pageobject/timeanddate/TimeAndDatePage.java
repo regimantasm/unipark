@@ -47,7 +47,7 @@ public class TimeAndDatePage extends PageObject {
         inputCarNumber.sendKeys(carNumber);
     }
 
-    public OrderPage selectCheapestParkingZone() throws InterruptedException {
+    public OrderPage selectCheapestParkingZone() {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", zones);
         wait.until(ExpectedConditions.visibilityOf(parkingZones.get(0)));
         for (WebElement zone : parkingZones) {

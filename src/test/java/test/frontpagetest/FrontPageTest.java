@@ -19,7 +19,7 @@ public class FrontPageTest extends TestBase {
     }
 
     @Test
-    public void selectTheCheapestZoneInVilnius() throws InterruptedException {
+    public void selectTheCheapestZoneInVilnius() {
         TimeAndDatePage time = front.fillInTheReservationInfo(1, "15:00", 2, "15:00");
         time.selectAirport(1);
         time.enterCarNumber("JCA666");
@@ -29,6 +29,6 @@ public class FrontPageTest extends TestBase {
         order.serviceSelector(2, "up", 2);
         order.fillInPersonalData("Jonas", "Jonka", "+37066666666", "jon.jonk@jonkatesting.org");
         order.checkAllCheckboxes();
-        Thread.sleep(5000);
+        order.fillInCompanyData("Jono nakvynės namai", "Saltoniškių g. 15-11", "121212121212", "12121212121214");
     }
 }

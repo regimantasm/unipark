@@ -1,12 +1,10 @@
 package pageobject.orderpage;
 
-import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobject.PageObject;
@@ -15,7 +13,7 @@ import java.util.List;
 
 public class OrderPage extends PageObject {
 
-    WebDriverWait wait = new WebDriverWait(driver, 5);
+    private WebDriverWait wait = new WebDriverWait(driver, 5);
 
     @FindBy(css = "table[class=service-item]:not([style*='none'])")
     private List<WebElement> additionalServices;
@@ -35,14 +33,26 @@ public class OrderPage extends PageObject {
     @FindBy(css = "#email1")
     private WebElement inputEmail;
 
+    @FindBy(css = "#invoice01")
+    private WebElement inputOrganisationName;
+
+    @FindBy(css = "#invoice02")
+    private WebElement inputAddress;
+
+    @FindBy(css = "#invoice03")
+    private WebElement inputOrganisationNumber;
+
+    @FindBy(css = "#invoice04")
+    private WebElement inputVatNumber;
+
     @FindBy(css = "#accept-button")
     private WebElement buttonAccept;
 
     @FindBy(css = ".checkDivBox .accept-text")
     private List<WebElement> checkboxes;
 
-    @FindBy(css = ".padds-1")
-    private List<WebElement> padds;
+    @FindBy(css = ".cookieConsentOK")
+    private WebElement buttonAgreeCookie;
 
     public OrderPage(WebDriver driver) {
         super(driver);
@@ -58,6 +68,12 @@ public class OrderPage extends PageObject {
         }
     }
 
+    public void checkAllCheckboxes() {
+        checkRulesAndConditions();
+        checkNewsLetter();
+        checkReceiveInvoice();
+    }
+
     public void fillInPersonalData(String firstName, String lastName, String phoneNumber, String email) {
         inputFirstName.sendKeys(firstName);
         inputLasttName.sendKeys(lastName);
@@ -65,12 +81,32 @@ public class OrderPage extends PageObject {
         inputEmail.sendKeys(email);
     }
 
-    public void checkAllCheckboxes() {
-        scrollToElement(checkboxes.get(0));
-        checkboxes.get(0).click();
+    public void fillInCompanyData(String companyName, String address, String organisationNumber, String vatNumber) {
+        inputOrganisationName.sendKeys(companyName);
+        inputAddress.sendKeys(address);
+        inputOrganisationNumber.sendKeys(organisationNumber);
+        inputVatNumber.sendKeys(vatNumber);
     }
 
-    public void scrollToElement(WebElement element) {
+    private void checkRulesAndConditions() {
+        scrollToElement(checkboxes.get(0));
+        checkboxes.get(0).click();
+        scrollToElement(buttonAccept);
+        buttonAgreeCookie.click();
+        wait.until(ExpectedConditions.visibilityOf(buttonAccept));
+        buttonAccept.click();
+    }
+
+    private void checkNewsLetter() {
+        checkboxes.get(2).click();
+    }
+
+    private void checkReceiveInvoice() {
+        checkboxes.get(3).click();
+
+    }
+
+    private void scrollToElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }
