@@ -3,10 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="b5aab104-3986-462e-8369-eb0a325231bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/frontpage/FrontPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/frontpage/FrontPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helper/Wait.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helper/enums/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/enums/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helper/enums/CheckboxType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/enums/CheckboxType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/frontpagetest/FrontPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/frontpagetest/FrontPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/frontpagetest/FrontPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/tests/OrderParkingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/Wait.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/enums/Airport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/helper/enums/Airport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/enums/CheckboxType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/helper/enums/CheckboxType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/frontpage/FrontPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/frontpage/FrontPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/orderpage/OrderPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/orderpage/OrderPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageobject/timeanddate/TimeAndDatePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageobject/timeanddate/TimeAndDatePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/frontpagetest/FrontPageTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,37 +35,37 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="1" />
-          <entry key="java" value="1279" />
+          <entry key="dummy" value="29" />
+          <entry key="java" value="1527" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1279" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="1527" />
+          <entry key="PLAIN_TEXT" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="10" />
+          <entry key="java" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="14" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/frontpagetest/FrontPageTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test/tests/OrderParkingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="144">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+            <state relative-caret-position="208">
+              <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1346#1347#0" expanded="true" />
@@ -77,16 +86,48 @@
                 <element signature="e#1715#1716#0" expanded="true" />
                 <element signature="e#2319#2320#0" expanded="true" />
                 <element signature="e#2344#2345#0" expanded="true" />
+                <element signature="e#3260#3261#0" expanded="true" />
+                <element signature="e#3340#3341#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/ServiceAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+              <folding>
+                <element signature="e#160#161#0" expanded="true" />
+                <element signature="e#196#197#0" expanded="true" />
+                <element signature="e#240#241#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/AdditionalServiceType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+              <folding>
+                <element signature="e#180#181#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/CheckboxType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
                 <element signature="e#177#178#0" expanded="true" />
                 <element signature="e#221#222#0" expanded="true" />
@@ -98,12 +139,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/helper/Scroll.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="354">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#716#717#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#807#808#0" expanded="true" />
+                <element signature="e#857#858#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,10 +159,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobject/frontpage/FrontPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="109" column="31" lean-forward="true" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+            <state relative-caret-position="75">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#1133#1134#0" expanded="true" />
                 <element signature="e#1162#1163#0" expanded="true" />
               </folding>
@@ -124,37 +170,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/Airport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-              <folding>
-                <element signature="e#169#170#0" expanded="true" />
-                <element signature="e#213#214#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#280#281#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/helper/Wait.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-351">
-              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1282#1283#0" expanded="true" />
@@ -189,12 +208,16 @@
         <option value="$PROJECT_DIR$/src/test/java/helper/Scroll.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderCheckboxType.java" />
         <option value="$PROJECT_DIR$/src/test/java/helper/enums/OrderCheckboxType.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/frontpagetest/FrontPageTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageobject/frontpage/FrontPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/helper/enums/Airport.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobject/frontpage/FrontPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/helper/enums/CheckboxType.java" />
+        <option value="$PROJECT_DIR$/src/test/java/helper/enums/ServiceType.java" />
+        <option value="$PROJECT_DIR$/src/test/java/helper/enums/AdditionalServiceType.java" />
+        <option value="$PROJECT_DIR$/src/test/java/helper/enums/ServiceAction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/tests/OrderParkingTest.java" />
       </list>
     </option>
   </component>
@@ -274,8 +297,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pageobject" type="462c0819:PsiDirectoryNode" />
-              <item name="frontpage" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unipark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unipark" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="unipark" type="b2602c69:ProjectViewProjectNode" />
@@ -292,12 +323,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547818377607" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547820819160" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -317,81 +349,81 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FrontPageTest.checkThatRigaHasASingleParkingZone">
-    <configuration name="FrontPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="OrderParkingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unipark" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.frontpagetest.*" />
+          <option name="PATTERN" value="test.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.frontpagetest" />
-      <option name="MAIN_CLASS_NAME" value="test.frontpagetest.FrontPageTest" />
+      <option name="PACKAGE_NAME" value="test.tests" />
+      <option name="MAIN_CLASS_NAME" value="test.tests.OrderParkingTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FrontPageTest.checkThatActualDayIsDisabled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderParkingTest.checkThatActualDayIsDisabled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unipark" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.frontpagetest.*" />
+          <option name="PATTERN" value="test.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.frontpagetest" />
-      <option name="MAIN_CLASS_NAME" value="test.frontpagetest.FrontPageTest" />
+      <option name="PACKAGE_NAME" value="test.tests" />
+      <option name="MAIN_CLASS_NAME" value="test.tests.OrderParkingTest" />
       <option name="METHOD_NAME" value="checkThatActualDayIsDisabled" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FrontPageTest.checkThatRigaHasASingleParkingZone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderParkingTest.checkThatRigaHasASingleParkingZone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unipark" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.frontpagetest.*" />
+          <option name="PATTERN" value="test.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.frontpagetest" />
-      <option name="MAIN_CLASS_NAME" value="test.frontpagetest.FrontPageTest" />
+      <option name="PACKAGE_NAME" value="test.tests" />
+      <option name="MAIN_CLASS_NAME" value="test.tests.OrderParkingTest" />
       <option name="METHOD_NAME" value="checkThatRigaHasASingleParkingZone" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderParkingTest.orderCheapestParking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unipark" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.frontpagetest.*" />
+          <option name="PATTERN" value="test.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.frontpagetest" />
-      <option name="MAIN_CLASS_NAME" value="test.frontpagetest.FrontPageTest" />
-      <option name="METHOD_NAME" value="selectTheCheapestZoneInVilnius" />
+      <option name="PACKAGE_NAME" value="test.tests" />
+      <option name="MAIN_CLASS_NAME" value="test.tests.OrderParkingTest" />
+      <option name="METHOD_NAME" value="orderCheapestParking" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FrontPageTest.checkThatActualDayIsDisabled" />
-      <item itemvalue="JUnit.FrontPageTest.checkThatRigaHasASingleParkingZone" />
-      <item itemvalue="JUnit.FrontPageTest" />
-      <item itemvalue="JUnit.FrontPageTest.selectTheCheapestZoneInVilnius" />
+      <item itemvalue="JUnit.OrderParkingTest.checkThatActualDayIsDisabled" />
+      <item itemvalue="JUnit.OrderParkingTest.checkThatRigaHasASingleParkingZone" />
+      <item itemvalue="JUnit.OrderParkingTest" />
+      <item itemvalue="JUnit.OrderParkingTest.orderCheapestParking" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FrontPageTest.checkThatRigaHasASingleParkingZone" />
-        <item itemvalue="JUnit.FrontPageTest.selectTheCheapestZoneInVilnius" />
-        <item itemvalue="JUnit.FrontPageTest" />
-        <item itemvalue="JUnit.FrontPageTest.checkThatActualDayIsDisabled" />
+        <item itemvalue="JUnit.OrderParkingTest.orderCheapestParking" />
+        <item itemvalue="JUnit.OrderParkingTest" />
+        <item itemvalue="JUnit.OrderParkingTest.checkThatRigaHasASingleParkingZone" />
+        <item itemvalue="JUnit.OrderParkingTest.checkThatActualDayIsDisabled" />
       </list>
     </recent_temporary>
   </component>
@@ -409,35 +441,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FrontPageTest_selectTheCheapestZoneInVilnius - 2019.01.18 at 12h 17m 51s.xml">
-      <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest_orderCheapestParking - 2019.01.18 at 15h 53m 49s.xml">
+      <configuration name="OrderParkingTest.orderCheapestParking" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_selectTheCheapestZoneInVilnius - 2019.01.18 at 12h 19m 04s.xml">
-      <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest_orderCheapestParking - 2019.01.18 at 15h 55m 32s.xml">
+      <configuration name="OrderParkingTest.orderCheapestParking" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_selectTheCheapestZoneInVilnius - 2019.01.18 at 12h 43m 45s.xml">
-      <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest_orderCheapestParking - 2019.01.18 at 15h 55m 42s.xml">
+      <configuration name="OrderParkingTest.orderCheapestParking" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_selectTheCheapestZoneInVilnius - 2019.01.18 at 12h 44m 12s.xml">
-      <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest_orderCheapestParking - 2019.01.18 at 15h 55m 53s.xml">
+      <configuration name="OrderParkingTest.orderCheapestParking" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_checkThatRigaHasASingleParkingZone - 2019.01.18 at 12h 49m 11s.xml">
-      <configuration name="FrontPageTest.checkThatRigaHasASingleParkingZone" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest_orderCheapestParking - 2019.01.18 at 15h 56m 32s.xml">
+      <configuration name="OrderParkingTest.orderCheapestParking" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_selectTheCheapestZoneInVilnius - 2019.01.18 at 12h 54m 53s.xml">
-      <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest - 2019.01.18 at 15h 56m 48s.xml">
+      <configuration name="OrderParkingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_selectTheCheapestZoneInVilnius - 2019.01.18 at 12h 58m 26s.xml">
-      <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest - 2019.01.18 at 15h 57m 08s.xml">
+      <configuration name="OrderParkingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_selectTheCheapestZoneInVilnius - 2019.01.18 at 15h 16m 14s.xml">
-      <configuration name="FrontPageTest.selectTheCheapestZoneInVilnius" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest - 2019.01.18 at 15h 58m 18s.xml">
+      <configuration name="OrderParkingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_checkThatRigaHasASingleParkingZone - 2019.01.18 at 15h 24m 16s.xml">
-      <configuration name="FrontPageTest.checkThatRigaHasASingleParkingZone" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest - 2019.01.18 at 15h 59m 16s.xml">
+      <configuration name="OrderParkingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrontPageTest_checkThatRigaHasASingleParkingZone - 2019.01.18 at 15h 24m 31s.xml">
-      <configuration name="FrontPageTest.checkThatRigaHasASingleParkingZone" configurationId="JUnit" />
+    <history-entry file="OrderParkingTest_orderCheapestParking - 2019.01.18 at 16h 12m 32s.xml">
+      <configuration name="OrderParkingTest.orderCheapestParking" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -453,7 +485,7 @@
     <frame x="0" y="23" width="1680" height="932" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49921754" visible="true" weight="0.14957266" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49921754" visible="true" weight="0.18315019" />
       <window_info id="Structure" order="1" sideWeight="0.5007825" side_tool="true" weight="0.15811966" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -462,7 +494,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30833334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30833334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3952381" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -513,6 +545,60 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -662,60 +748,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/helper/Scroll.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/frontpagetest/FrontPageTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/Airport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1346#1347#0" expanded="true" />
-            <element signature="e#1375#1376#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pageobject/timeanddate/TimeAndDatePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-351">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="285">
+          <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1282#1283#0" expanded="true" />
@@ -726,38 +783,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pageobject/frontpage/FrontPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="109" column="31" lean-forward="true" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+        <state relative-caret-position="75">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1133#1134#0" expanded="true" />
             <element signature="e#1162#1163#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/Airport.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/ServiceAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
           <folding>
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/AdditionalServiceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#180#181#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/helper/enums/CheckboxType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="255">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
             <element signature="e#177#178#0" expanded="true" />
             <element signature="e#221#222#0" expanded="true" />
             <element signature="e#271#272#0" expanded="true" />
             <element signature="e#304#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageobject/orderpage/OrderPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#2319#2320#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#3260#3261#0" expanded="true" />
+            <element signature="e#3340#3341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/tests/OrderParkingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

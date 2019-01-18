@@ -64,16 +64,10 @@ public class OrderPage extends PageObject {
         wait.until(ExpectedConditions.visibilityOf(inputFirstName));
     }
 
-    public void serviceSelector(int service, String arrow, int quantity) {
+    public void serviceSelector(int service, String action, int quantity) {
         for (int i = 0; i < quantity; i++) {
-            additionalServices.get(service - 1).findElement(By.className(arrow)).click();
+            additionalServices.get(service).findElement(By.className(action)).click();
         }
-    }
-
-    public void checkAllCheckboxes() {
-        checkRulesAndConditions();
-        checkNewsLetter();
-        checkReceiveInvoice();
     }
 
     public void fillInPersonalData(String firstName, String lastName, String phoneNumber, String email) {
@@ -88,6 +82,12 @@ public class OrderPage extends PageObject {
         inputAddress.sendKeys(address);
         inputOrganisationNumber.sendKeys(organisationNumber);
         inputVatNumber.sendKeys(vatNumber);
+    }
+
+    public void checkAllCheckboxes() {
+        checkRulesAndConditions();
+        checkNewsLetter();
+        checkReceiveInvoice();
     }
 
     private void checkRulesAndConditions() {
@@ -105,10 +105,5 @@ public class OrderPage extends PageObject {
 
     private void checkReceiveInvoice() {
         checkboxes.get(CheckboxType.GET_INVOICE.getNumeration()).click();
-
     }
-
-//    private void scrollToElement(WebElement element) {
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-//    }
 }

@@ -1,5 +1,6 @@
 package pageobject.timeanddate;
 
+import helper.Scroll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -48,7 +49,7 @@ public class TimeAndDatePage extends PageObject {
     }
 
     public OrderPage selectCheapestParkingZone() {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", zones);
+        Scroll.scrollToElement(driver, parkingZones.get(0));
         wait.until(ExpectedConditions.visibilityOf(parkingZones.get(0)));
         for (WebElement zone : parkingZones) {
             String priceFormatted = zone.findElement(By.className("coll-4")).getText().replace(",", ".");

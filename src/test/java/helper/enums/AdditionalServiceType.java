@@ -1,14 +1,13 @@
 package helper.enums;
 
-public enum Airport {
+public enum AdditionalServiceType {
 
-    VILNIUS_AIRPORT(0),
-    KAUNAS_AIRPORT(1),
-    RIGA_AIRPORT(2);
+    FAST_CHECK_IN(0),
+    LUGGAGE_PACKING(1);
 
     private int numeration;
 
-    Airport(int numeration) {
+    AdditionalServiceType(int numeration) {
         this.numeration = numeration;
     }
 
