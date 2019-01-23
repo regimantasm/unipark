@@ -1,9 +1,12 @@
 package pageobject.frontpage;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobject.PageObject;
 import pageobject.timeanddate.TimeAndDatePage;
 
@@ -13,7 +16,9 @@ import java.util.TimeZone;
 
 public class FrontPage extends PageObject {
 
-    @FindBy(id = "time_from")
+    public WebDriverWait wait = new WebDriverWait(driver, 5);
+
+    @FindBy(css = "#time_from")
     private WebElement dateFrom;
 
     @FindBy(id = "hour_from")
@@ -22,7 +27,7 @@ public class FrontPage extends PageObject {
     @FindBy(id = "time_to")
     private WebElement dateTo;
 
-    @FindBy(id = "hour_to")
+    @FindBy(css = "#hour_to")
     private WebElement hourTo;
 
     @FindBy(css = ".order-button")
@@ -42,6 +47,11 @@ public class FrontPage extends PageObject {
 
     public FrontPage(WebDriver driver) {
         super(driver);
+    }
+
+    private void clickDateFrom() {
+        dateFrom.click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("ui-datepicker-div"))));
     }
 
     private TimeAndDatePage clickButtonOrder() {
@@ -88,26 +98,20 @@ public class FrontPage extends PageObject {
     }
 
     public TimeAndDatePage fillInTheReservationInfo(int daysFromToday, String timeFrom, int daysFromToday2, String timeTo) {
-        dateFrom.click();
+        clickDateFrom();
         selectDay(daysFromToday);
         hourFrom.click();
         selectTime(timeFrom);
         dateTo.click();
-        Assert.assertTrue(verifyThatActualDayIsDisabled());
+        verifyThatActualDayIsDisabled();
         selectDay(daysFromToday2);
         hourTo.click();
         selectTime(timeTo);
         return clickButtonOrder();
     }
 
-    private boolean verifyThatActualDayIsDisabled() {
-        boolean todayIsDisabled = false;
-        for (WebElement day : unavailableDays) {
-            if (day.getText().equals(getFutureDay(0))) {
-                todayIsDisabled = true;
-            }
-        }
-        return todayIsDisabled;
+    private void verifyThatActualDayIsDisabled() {
+        Assert.assertTrue("Actual day must be disabled!", today.getAttribute("class").contains("ui-state-disabled"));
     }
 
     private String getFutureDay(int daysFromToday) {

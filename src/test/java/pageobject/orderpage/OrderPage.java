@@ -15,7 +15,7 @@ import java.util.List;
 public class OrderPage extends PageObject {
 
 
-    public WebDriverWait wait = new WebDriverWait(driver, 5);
+    private WebDriverWait wait = new WebDriverWait(driver, 5);
 
     @FindBy(css = "table[class=service-item]:not([style*='none'])")
     private List<WebElement> additionalServices;
