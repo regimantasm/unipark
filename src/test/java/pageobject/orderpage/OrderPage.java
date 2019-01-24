@@ -1,21 +1,17 @@
 package pageobject.orderpage;
 
 import helper.Scroll;
+import helper.Wait;
 import helper.enums.CheckboxType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobject.PageObject;
 
 import java.util.List;
 
 public class OrderPage extends PageObject {
-
-
-    private WebDriverWait wait = new WebDriverWait(driver, 5);
 
     @FindBy(css = "table[class=service-item]:not([style*='none'])")
     private List<WebElement> additionalServices;
@@ -61,7 +57,7 @@ public class OrderPage extends PageObject {
     }
 
     public void waitUntilPageIsDisplayed() {
-        wait.until(ExpectedConditions.visibilityOf(inputFirstName));
+        Wait.waitUntilTheElementIsVisible(driver, inputFirstName);
     }
 
     public void serviceSelector(int service, String action, int quantity) {
@@ -95,7 +91,7 @@ public class OrderPage extends PageObject {
         checkboxes.get(CheckboxType.TERMS_AND_CONDITIONS.getNumeration()).click();
         Scroll.scrollToElement(driver, buttonAccept);
         buttonAgreeCookie.click();
-        wait.until(ExpectedConditions.visibilityOf(buttonAccept));
+        Wait.waitUntilTheElementIsVisible(driver, buttonAccept);
         buttonAccept.click();
     }
 

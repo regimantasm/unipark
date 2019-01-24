@@ -1,5 +1,6 @@
 package test.tests;
 
+import helper.Wait;
 import helper.enums.AdditionalServiceType;
 import helper.enums.Airport;
 import helper.enums.ServiceAction;

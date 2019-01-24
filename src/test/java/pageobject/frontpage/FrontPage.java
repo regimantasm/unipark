@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pageobject.PageObject;
 import pageobject.timeanddate.TimeAndDatePage;
-
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;

@@ -1,12 +1,11 @@
 package pageobject.timeanddate;
 
 import helper.Scroll;
+import helper.Wait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobject.PageObject;
 import pageobject.orderpage.OrderPage;
 
@@ -15,8 +14,6 @@ import java.util.*;
 import static org.junit.Assert.*;
 
 public class TimeAndDatePage extends PageObject {
-
-    private WebDriverWait wait = new WebDriverWait(driver, 5);
 
     @FindBy(css = ".tabs a")
     private List<WebElement> airPorts;
@@ -49,7 +46,7 @@ public class TimeAndDatePage extends PageObject {
 
     public OrderPage selectCheapestParkingZone() {
         Scroll.scrollToElement(driver, parkingZones.get(0));
-        wait.until(ExpectedConditions.visibilityOf(parkingZones.get(0)));
+        Wait.waitUntilTheElementIsVisible(driver, parkingZones.get(0));
         for (WebElement zone : parkingZones) {
             String priceFormatted = zone.findElement(By.className("coll-4")).getText().replace(",", ".");
             if (priceFormatted.contains(findCheapestParkingZone().toString())) {
