@@ -91,7 +91,7 @@ public class OrderPage extends PageObject {
     }
 
     private void checkRulesAndConditions() {
-        Scroll.scrollToElement(driver, checkboxes.get(0));
+        Scroll.scrollToElement(driver, checkboxes.get(CheckboxType.TERMS_AND_CONDITIONS.getNumeration()));
         checkboxes.get(CheckboxType.TERMS_AND_CONDITIONS.getNumeration()).click();
         Scroll.scrollToElement(driver, buttonAccept);
         buttonAgreeCookie.click();

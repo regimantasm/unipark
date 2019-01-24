@@ -1,12 +1,9 @@
 package pageobject.frontpage;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobject.PageObject;
 import pageobject.timeanddate.TimeAndDatePage;
 
@@ -16,13 +13,17 @@ import java.util.TimeZone;
 
 public class FrontPage extends PageObject {
 
-    public WebDriverWait wait = new WebDriverWait(driver, 5);
-
     @FindBy(css = "#time_from")
     private WebElement dateFrom;
 
+    @FindBy(css = "#ui-datepicker-div")
+    private WebElement dateFromTable;
+
     @FindBy(id = "hour_from")
     private WebElement hourFrom;
+
+    @FindBy(css = ".ui-timepicker-list")
+    private WebElement hourFromTable;
 
     @FindBy(id = "time_to")
     private WebElement dateTo;
@@ -43,15 +44,10 @@ public class FrontPage extends PageObject {
     private List<WebElement> availableHours;
 
     @FindBy(css = "td[class*='ui-datepicker-today']")
-    public WebElement today;
+    private WebElement today;
 
     public FrontPage(WebDriver driver) {
         super(driver);
-    }
-
-    private void clickDateFrom() {
-        dateFrom.click();
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("ui-datepicker-div"))));
     }
 
     private TimeAndDatePage clickButtonOrder() {
@@ -98,7 +94,7 @@ public class FrontPage extends PageObject {
     }
 
     public TimeAndDatePage fillInTheReservationInfo(int daysFromToday, String timeFrom, int daysFromToday2, String timeTo) {
-        clickDateFrom();
+        dateFrom.click();
         selectDay(daysFromToday);
         hourFrom.click();
         selectTime(timeFrom);

@@ -1,5 +1,6 @@
 package test;
 
+import helper.JSwait;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -23,6 +24,7 @@ public class TestBase {
     @Before
     public void setUp(){
         driver.get("https://www.unipark.lt");
+        JSwait.waitForPageLoaded(driver);
     }
 
     @After
